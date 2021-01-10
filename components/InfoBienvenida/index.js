@@ -2,9 +2,9 @@ import { Container } from "./styles";
 export const InfoBienvenida = () => {
   return (
     <Container>
-      <h2>Bienvenid@</h2>
+      <h2>Bienvenid@ a nuestra plataforma de reservación de vuelos.</h2>
       <ul>
-        <li>- Buenos Precios</li>
+        <li>- Tenemos Buenos Precios</li>
         <li>- Alta oferta de vuelos</li>
         <li>- Viajes seguros</li>
       </ul>

@@ -7,8 +7,7 @@ export const ContainerComponent = styled.div`
 
   @media (min-width: 1024px) {
     position: absolute !important;
-    top: 110px;
-    box-shadow: 0px 0px 5px 5px #ddd;
+    top: 220px;
     border-radius: 10px;
     left: 153px;
     padding: 10px;
@@ -17,6 +16,7 @@ export const ContainerComponent = styled.div`
     right: 0;
     bottom: 0;
     margin: auto;
+    height: 105%;
   }
 
   & h2 {
@@ -28,8 +28,10 @@ export const ContainerConsultaVuelos = styled.div`
   border: 1px solid #ddd;
   padding: 10px;
   & > div:nth-child(1) {
-    width: 400px;
-    display: flex;
+    max-width: 400px;
+    & input {
+      width: 100%;
+    }
     margin: auto;
     flex-direction: row;
     & input {
@@ -59,8 +61,19 @@ export const ContainerConsultaVuelos = styled.div`
     }
   }
 `;
-
+export const ContainerSearch = styled.div`
+  & div:nth-child(1) {
+    height: 200px;
+    overflow: auto;
+  }
+`;
 export const ContainerVuelosCard = styled.div`
   border: 1px solid #ddd;
   padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    display: flex;
+  }
 `;

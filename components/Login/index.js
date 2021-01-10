@@ -141,6 +141,7 @@ export const Login = () => {
           <Alert variant={CmpAlertLogin.Type} show={CmpAlertLogin.Show}>
             {CmpAlertLogin.Text}
           </Alert>
+          <br />
           <Button variant="primary" onClick={Logins}>
             Iniciar
           </Button>

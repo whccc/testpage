@@ -17,11 +17,13 @@ export const Navigation = () => {
             }}
           />
           <Link href="/">
-            <img src="./Person.png" />
+            <img style={{ cursor: "pointer" }} src="./Person.png" />
           </Link>
         </div>
         <div>
-          <span onClick={DeleteJsonData}>Cerrar Sesión</span>
+          <span style={{ cursor: "pointer" }} onClick={DeleteJsonData}>
+            Cerrar Sesión
+          </span>
         </div>
       </ContainerTopNavigation>
       <ContainerNavigation ShowMenu={ShowMenu}>
@@ -34,9 +36,9 @@ export const Navigation = () => {
             </Link>
           </li>
           <li>
-            <Link href="/EstadoVuelos">
+            <Link href="/MisVuelos">
               <a>
-                <BsFillCalendarFill /> Estados Vuelos
+                <BsFillCalendarFill /> Mis Vuelos
               </a>
             </Link>
           </li>
