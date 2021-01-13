@@ -1,8 +1,21 @@
-import { Container } from "./styles";
+import { Container } from './styles'
+import React from 'react'
 
-import Button from "react-bootstrap/Button";
+import Button from 'react-bootstrap/Button'
 
-export const CardMyFlight = ({
+interface Card {
+  intIdReserva: number
+  strOrigen: string
+  strDestino: string
+  strPrecio: string
+  dtFechaReserva: string
+  strNombre: string
+  strHora: string
+  SetModalReserva
+  SetObjDataDelete
+}
+
+export const CardMyFlight: React.FC<Card> = ({
   intIdReserva,
   strOrigen,
   strDestino,
@@ -11,9 +24,9 @@ export const CardMyFlight = ({
   strNombre,
   strHora,
   SetModalReserva,
-  SetObjDataDelete,
+  SetObjDataDelete
 }) => {
-  let FechaReserva = dtFechaReserva.split("T")[0].split("-");
+  const FechaReserva = dtFechaReserva.split('T')[0].split('-')
   return (
     <Container>
       <h2>{strNombre}</h2>
@@ -22,9 +35,9 @@ export const CardMyFlight = ({
         <small>$ {strPrecio}</small>
         <small>
           Fecha Reserva {FechaReserva[2]}
-          {"/"}
+          {'/'}
           {FechaReserva[1]}
-          {"/"}
+          {'/'}
           {FechaReserva[0]}
         </small>
         <small>Fecha Salida {strHora}</small>
@@ -32,12 +45,12 @@ export const CardMyFlight = ({
       <Button
         variant="danger"
         onClick={() => {
-          SetModalReserva(true);
-          SetObjDataDelete(intIdReserva);
+          SetModalReserva(true)
+          SetObjDataDelete(intIdReserva)
         }}
       >
         Cancelar
       </Button>
     </Container>
-  );
-};
+  )
+}

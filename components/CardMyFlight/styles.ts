@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   border: 1px solid #33bbff;
@@ -14,4 +14,4 @@ export const Container = styled.div`
   @media (min-width: 1024px) {
     width: 32.3%;
   }
-`;
+`

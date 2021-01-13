@@ -1,26 +1,42 @@
-import { Container } from "./styles";
-import Button from "react-bootstrap/Button";
-import Badge from "react-bootstrap/Badge";
-export const CardVuelos = ({
+import { Container } from './styles'
+import Button from 'react-bootstrap/Button'
+import Badge from 'react-bootstrap/Badge'
+import React from 'react'
+
+interface Card {
+  intId: number
+  strNombre: string
+  strOrigen: string
+  strDestino: string
+  strPrecio: string
+  nAsientos: string
+  intEstado: number
+  strHora: string
+  TypeSearch: number
+  SetModalReserva
+  DataReserva
+}
+
+export const CardVuelos: React.FC<Card> = ({
   intId,
   strNombre,
   strOrigen,
   strDestino,
   strPrecio,
-  N_Asientos,
+  nAsientos,
   intEstado,
   strHora,
   TypeSearch,
   SetModalReserva,
-  DataReserva,
+  DataReserva
 }) => {
-  const Type = (TypeSearch) => {
-    if (TypeSearch == 3) {
+  const Type = TypeSearch => {
+    if (TypeSearch === 3) {
       return (
         <>
-          <small>Asientos: {N_Asientos}</small>
+          <small>Asientos: {nAsientos}</small>
           <small>
-            {intEstado == 1 ? (
+            {intEstado === 1 ? (
               <h6>
                 <Badge variant="primary">Disponible</Badge>
               </h6>
@@ -31,11 +47,11 @@ export const CardVuelos = ({
             )}
           </small>
         </>
-      );
+      )
     } else {
-      return null;
+      return null
     }
-  };
+  }
 
   return (
     <Container>
@@ -48,21 +64,21 @@ export const CardVuelos = ({
       <small>$ {strPrecio}</small>
       <Button
         onClick={() => {
-          SetModalReserva(true);
+          SetModalReserva(true)
           DataReserva({
             intId,
             strNombre,
             strOrigen,
             strDestino,
             strHora,
-            strPrecio,
-          });
+            strPrecio
+          })
         }}
         variant="primary"
-        disabled={intEstado == 1 ? true : false}
+        disabled={intEstado === 2}
       >
         Reservar
       </Button>
     </Container>
-  );
-};
+  )
+}

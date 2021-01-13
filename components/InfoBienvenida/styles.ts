@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   padding: 5px;
@@ -10,4 +10,4 @@ export const Container = styled.div`
   @media (min-width: 1024px) {
     min-width: 300px;
   }
-`;
+`

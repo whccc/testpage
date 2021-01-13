@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ContainerTopNavigation = styled.div`
   background-color: #33bbff;
@@ -34,11 +34,11 @@ export const ContainerTopNavigation = styled.div`
       left: 30px;
     }
   }
-`;
+`
 
 export const ContainerNavigation = styled.div`
   position: absolute;
-  left: ${(props) => (props.ShowMenu ? "-100%" : "0%")};
+  left: ${props => (props.ShowMenu ? '-100%' : '0%')};
   display: inline-block;
   background-color: #33bbff;
   min-height: 100vh;
@@ -62,4 +62,4 @@ export const ContainerNavigation = styled.div`
     position: relative;
     height: 110vh;
   }
-`;
+`

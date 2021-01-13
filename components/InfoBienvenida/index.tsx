@@ -1,5 +1,6 @@
-import { Container } from "./styles";
-export const InfoBienvenida = () => {
+import { Container } from './styles'
+import React from 'react'
+export const InfoBienvenida: React.FC = () => {
   return (
     <Container>
       <h2>Bienvenid@ a nuestra plataforma de reservación de vuelos.</h2>
@@ -9,5 +10,5 @@ export const InfoBienvenida = () => {
         <li>- Viajes seguros</li>
       </ul>
     </Container>
-  );
-};
+  )
+}
